@@ -48,7 +48,7 @@ import rosegraphics as rg
 
 ###############################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Run this module.  A window will pop up and Turtles will move around.
 #   After the Turtles stop moving,
 #      ** click anywhere in the window to close the window **.
@@ -73,6 +73,12 @@ import rosegraphics as rg
 #   change this _TODO_ to DONE and  ** continue to the next _TODO_ (below). **
 #
 ###############################################################################
+rg.SimpleTurtle()
+natasha = rg.SimpleTurtle()
+natasha.forward(100)
+natasha.speed = 10
+
+
 
 # -----------------------------------------------------------------------------
 # The next few lines show how to:
@@ -88,7 +94,7 @@ window.delay(20)  # Bigger numbers mean slower animation.
 #   - CONSTRUCT (make) a  SimpleTurtle  object and ASSIGN a NAME to the object.
 # -----------------------------------------------------------------------------
 boris = rg.SimpleTurtle()
-
+boris.speed = natasha.speed
 # -----------------------------------------------------------------------------
 # The next few lines show how to:
 #   - Ask the SimpleTurtle object to do things by applying METHODs to it.
@@ -116,7 +122,7 @@ natasha.go_to(rg.Point(-100, 200))
 
 ###############################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Add a few more lines of your own code to make one of the existing
 #   SimpleTurtles move some more and/or have different characteristics.
 #
@@ -126,10 +132,15 @@ natasha.go_to(rg.Point(-100, 200))
 #   As always, test by running the module.
 #
 ###############################################################################
+natasha.backward(125)
+natasha.right(90)
+natasha.backward(90)
+boris.pen=rg.Pen('green', 20)
+boris.go_to(rg.Point(-100, 200))
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The above code  CONSTRUCTS  two SimpleTurtle objects
 #   and gives those objects NAMES:
 #       boris    natasha
@@ -153,10 +164,16 @@ natasha.go_to(rg.Point(-100, 200))
 #   As always, test by running the module.
 #
 ###############################################################################
-
+rg.SimpleTurtle()
+elon = rg.SimpleTurtle()
+elon.pen = rg.Pen('yellow', 10)
+elon.right(45)
+elon.forward(20)
+elon.backward(20)
+elon.left(45)
 ###############################################################################
 #
-# TODO: 6.
+# DONE: 6.
 #   Ensure that no blue bars on the scrollbar-thing to the right remain.
 #   Run one more time to be sure that all is still OK.
 #
