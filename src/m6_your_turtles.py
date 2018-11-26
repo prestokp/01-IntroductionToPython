@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Kirk Preston.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -28,3 +28,33 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+import rosegraphics as rg
+window = rg.SimpleTurtle()
+size = 400
+rg.SimpleTurtle()
+falcon=rg.SimpleTurtle('turtle')
+falcon.pen = rg.Pen('orange', 20)
+for k in range(5):
+    falcon.speed = 100
+    falcon.draw_circle(100)
+    falcon.right(45)
+    falcon.forward(10)
+    falcon.left(45)
+    falcon.forward(10)
+size = size - 20
+
+rg.SimpleTurtle('turtle')
+dragon=rg.SimpleTurtle('turtle')
+dragon.Pen = rg.Pen('turtle', 10)
+for k in range(5):
+    dragon.draw_regular_polygon(6, 30)
+    dragon.speed = falcon.speed
+    dragon.right(10)
+    dragon.forward(10)
+    dragon.left(10)
+    dragon.forward(10)
+    size = size - 20
+
+window = rg.TurtleWindow()
+window.close_on_mouse_click()
+
