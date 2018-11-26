@@ -11,7 +11,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Write code that accomplishes the following (and ONLY the following),
 #   in the order listed:
 #
@@ -49,6 +49,10 @@ rg.SimpleTurtle()
 preston = rg.SimpleTurtle()
 preston.pen = rg.Pen('blue', 10)
 preston.forward(200)
-
+preston.pen_up()
+preston.go_to(rg.Point(100, -40))
+preston.pen_down()
+preston.pen = rg.Pen('green', 10)
+preston.backward(150)
 window.close_on_mouse_click()
 
